@@ -2738,4 +2738,7 @@
   <java-symbol type="string" name="power_key_emergency_number" />
   <java-symbol type="integer" name="power_key_hits_emergency" />
   <java-symbol type="bool" name="config_emergencyCallOnPowerkeyTapGestureEnabled" />
+  
+  <!-- Gesture Sensor -->
+  <java-symbol type="bool" name="config_enableGestureService" />
 </resources>
