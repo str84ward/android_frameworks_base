@@ -26,6 +26,7 @@ import android.view.accessibility.AccessibilityEvent;
 import android.view.GestureDetector;
 import android.os.PowerManager;
 import android.provider.Settings;
+import android.util.Log;
 
 import com.android.systemui.DejankUtils;
 import com.android.systemui.EventLogTags;

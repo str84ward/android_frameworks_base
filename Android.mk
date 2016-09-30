@@ -58,6 +58,8 @@ ifneq ($(LOCAL_KEYDISABLER_FILE),)
 	LOCAL_SRC_FILES += $(LOCAL_KEYDISABLER_FILE)
 endif
 
+LOCAL_AAPT_FLAGS += --private-symbols com.android.internal
+
 ## READ ME: ########################################################
 ##
 ## When updating this list of aidl files, consider if that aidl is

@@ -3379,7 +3379,6 @@ public final class PowerManagerService extends SystemService
             }
         }
 
-        @Override // Binder call
         private void wakeUp(final long eventTime, final String reason, final String opPackageName,
                 boolean checkProximity) {
             if (eventTime > SystemClock.uptimeMillis()) {
@@ -3406,6 +3405,11 @@ public final class PowerManagerService extends SystemService
             } else {
                 r.run();
             }
+        }
+        
+        @Override // Binder call
+        public void wakeUp(final long eventTime, final String reason, final String opPackageName) {
+            wakeUp(eventTime, reason, opPackageName, false);
         }
 
         private void runWithProximityCheck(Runnable r) {
@@ -3463,11 +3467,6 @@ public final class PowerManagerService extends SystemService
         @Override // Binder call
         public void wakeUpWithProximityCheck(long eventTime, String reason, String opPackageName) {
             wakeUp(eventTime, reason, opPackageName, true);
-        }
-
-        @Override // Binder call
-        public void wakeUp(long eventTime, String reason, String opPackageName) {
-            wakeUp(eventTime, reason, opPackageName, false);
         }
 
         @Override // Binder call

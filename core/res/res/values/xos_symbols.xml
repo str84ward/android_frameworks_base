@@ -20,6 +20,17 @@
          Use them as internal symbols instead. -->
     <private-symbols package="com.android.internal" />
 
+    <!-- Emergency Number to be invoked when Power key is pressed.
+         Default value is set to 112 as this FR is mainly intended
+         for Indian market-->
+    <java-symbol type="string" name="power_key_emergency_number" />
+    <!-- Number of power key hits to invoke emergency call -->
+    <java-symbol type="integer" name="power_key_hits_emergency" />
+
+    <!-- Allow the gesture to tap the power button N times to start
+         the Emergency Call while the device is non-interactive. -->
+    <java-symbol type="bool" name="config_emergencyCallOnPowerkeyTapGestureEnabled" />
+
     <!-- Proximity check on screen on -->
     <java-symbol type="bool" name="config_proximityCheckOnWake" />
     
